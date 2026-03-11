@@ -1,0 +1,333 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #ffffff;  
+    padding: 0; 
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #7E7E7E;
+    margin: 0;
+    scroll-margin-top: 10.5vh;
+    font-size: 3%;
+}
+
+.logo-img {
+    max-width: 90%;
+    height: auto;
+    /* display: block; */
+    margin-right: 40vh;
+    margin-left: 8vh;
+}
+
+.list-inline a {
+    text-decoration: none;
+    color: #7E7E7E;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    transition: color 0.3s;
+}
+
+.list-inline a:hover {
+    color: #515151;
+}
+
+.sticky {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 0.5em;
+    border-bottom: 1px solid #ABABAB;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button {
+    margin-left: 1.5%;
+    font-family: "Manrope";
+    background-color: #fff;
+}
+
+.list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.list-inline > li {
+    display: inline-block;
+    margin-right: 7.5vw;
+}
+
+
+.sidebar-module {
+    position: sticky;
+    top: 70px;
+    min-width: 300px;
+    width: 100%;
+    max-width: 384px;
+    height: 90vh;
+    background-color: #ffffff;
+    padding: 35px 60px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: transform 0.3s ease;
+}
+
+.sidebar-module.hidden {
+    display: none; /* Сдвиг влево при скрытии */
+}
+
+.side-container .toggle-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ABABAB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для ссылок */
+.sidebar-module a {
+    font-size: 10pt; /* Устанавливаем размер шрифта */
+    color: #5E5E5E; /* Устанавливаем цвет шрифта */
+    text-decoration: none;
+    font-family: inherit; /* Убедитесь, что используется шрифт от родителя */
+    font-weight: inherit; /* Наследуем вес шрифта */
+    font-style: inherit; /* Наследуем стиль шрифта */
+}
+
+/* Стили для заголовков h2 и h3 */
+.sidebar-module h2 {
+    margin: 0;
+    padding-top: 6.5%;
+    color: #5E5E5E; /* Цвет шрифта для заголовков */
+    font-size: 17pt; /* Размер шрифта для заголовков */
+    font-family: inherit; /* Наследуем шрифт от родителя */
+    font-weight: inherit; /* Наследуем вес шрифта */
+    font-style: inherit; /* Наследуем стиль шрифта */
+}
+
+.sidebar-module h3 {
+    margin: 0;
+    padding-top: 2.5%;
+    color: #5E5E5E; /* Цвет шрифта для заголовков */
+    font-size: 22.6pt; /* Размер шрифта для заголовков */
+    font-family: inherit; /* Наследуем шрифт от родителя */
+    font-weight: inherit; /* Наследуем вес шрифта */
+    font-style: inherit; /* Наследуем стиль шрифта */
+}
+
+.sidebar-module ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #5E5E5E;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+.sidebar-module ul li {
+    margin: 10px 0;
+}
+
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.lesson-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.lesson-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+
+.lesson-list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    bottom: -18px;
+    width: 2px;
+    background-color: #aaa;
+    transform: translateY(15%);
+}
+
+.lesson-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lesson-list a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+.button-next {
+    background: linear-gradient(80deg, #FD93FF, #50D4FF); /* градиент от розового к синему */
+    color: #fff;
+    border: none;
+    border-radius: 7px; /* закругленные края */
+    padding: 6% 17%;
+    font-size: 10.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    bottom: 15%;
+    font-size: 11pt;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    white-space: nowrap;
+    margin-top: 8%;
+}
+
+/* Эффект при нажатии */
+.button-next:active {
+    transform: scale(0.98); /* Слегка уменьшаем кнопку при нажатии */
+}
+
+.main-container{
+    display:flex;   
+    flex-direction: row;
+    width: 100%;
+    background-color: #ffffff;
+    
+}
+.back-container{
+    background-image: url(../img/lessonsBack.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Основной контейнер для урока */
+.lesson-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 875px;
+    min-width: 280px;
+    margin: 0 auto; /* Центрируем контейнер */
+    padding-left: 0;
+}
+
+/* Заголовок урока */
+.lesson-title {
+    text-align: left;
+    padding: 8% 8% 0;
+    margin-bottom: 20px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18pt;
+    color: #5E5E5E;
+}
+
+/* Текст внутри раздела */
+.lesson-text {
+    text-align: left;
+    padding: 0 8%;
+    margin-bottom: 19px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+    color:#5E5E5E;
+}
+
+.lesson-text a {
+    color:#5E5E5E;
+}
+
+.button-next-ur {
+    display: inline-block; /* Для работы с размерами и центровкой */
+    padding: 15px 30px; /* Отступы внутри кнопки */
+    font-size: 16px; /* Размер текста */
+    font-family: "Manrope";
+    font-weight: bold;
+    color: #5E5E5E; /* Цвет текста (серый) */
+    background-color: #fff; /* Белый фон */
+    border: 3px solid #5E5E5E; /* Серая граница */
+    border-radius: 10px; /* Закругление углов */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание (если это ссылка) */
+    cursor: pointer; /* Указывает, что элемент кликабелен */
+    transition: all 0.3s ease; /* Анимация на наведение */
+    margin-left: 8%;
+    margin-top: 3%;
+    margin-bottom: 6%;
+}
+
+@media (max-width:500px) {
+    .button-next{
+        font-size: 10pt;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Course1</title>
+    <link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="toggle-button" onclick="toggleSidebar()">скрыть</button>
+            <div class="logo"><a href="#logo"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a">о проекте</a></li>
+                <li><a href="#b">обучение</a></li>
+                <li><a href="#c">отзывы</a></li>
+                <li><a href="#d">связь с нами</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="section" id="logo"></article>
+    </div>
+
+    <div class="main-container">
+            <div class="sidebar-module" id="sidebar">
+                <a href="course5.html">&lt; назад</a>
+                <h2>6 МОДУЛЬ</h2>
+                <h3>РЕНДЕР</h3>
+                <ul class="lesson-list">
+                    <li><a href="#" onclick="add_content6_1()">Камера</a></li>
+                    <li><a href="#" onclick="add_content6_2()">Свет</a></li>
+                </ul>
+                <button class="button-next" onclick="openNextModule()">СЛЕДУЮЩИЙ МОДУЛЬ &gt</button>
+                <script>
+                    function openNextModule() {
+                        window.location.href = "course7.html";}
+                </script>
+
+            </div>
+        
+        
+        <div class="back-container">
+            <div class="lesson-container" id="lesson-container">
+                <h1 class="lesson-title">КАМЕРА</h1>
+                <p class="lesson-text">
+                    Давайте займемся расположением нашей текущей сцены в камере. Создадим её с помощью shift + A.
+                    <br> <br>
+                    <img
+                        src="img/Render-1.png"
+                        width=40%>
+                    <br><br>
+                    На numpad нажмем 0, чтобы перейти в просмотр с камеры. Для выхода тоже можно нажать 0. Нажмем клавишу G и зажмем колесико мыши, чтобы отдалить камеру. 
+                    <br> <br>
+                    <img
+                        src="img/Render-2.png"
+                        width=100%>
+                    <br><br>
+                    Выравниваем нашу комнатку примерно по центру картинки. 
+                    <br>Размер окна самой камеры можно поменять в настройках сцены. 
+                    <br> <br>
+                    <img
+                        src="img/Render-3.png"
+                        width=60%>
+                    <br><br>
+                    Если нужно сделать рендер в ортографическом режиме, то отдаление в настройках камеры осуществляется так. Я буду совершать рендер именно в этом режиме.
+                    <br><br>
+                    <img
+                        src="img/Render-4.png"
+                        width=60%>
+                    <br><br>
+                    Для фона двайте создадим плоскость и создадим для нее материал.
+                    <br><br>
+                    <img
+                        src="img/Render-5.png"
+                        width=100%>
+                    <br><br>
+                    Самое время поменять способ отображения объектов на Rendered.
+                    <br><br>
+                    <img
+                        src="img/Render-6.png"
+                        width=20%>
+                </p>
+                <button class="button-next-ur" onclick="add_content6_2()">СЛЕДУЮЩИЙ МОДУЛЬ</button>
+            </div>
+        </div>
+    </div>
+<script src="back.js"></script>
+</body>
+</html>

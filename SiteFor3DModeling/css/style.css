@@ -1,0 +1,722 @@
+/**
+.manrope-<uniquifier> {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.unbounded-<uniquifier> {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+
+ html{
+    box-sizing: border-box;
+ }
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+}
+
+ body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container{
+    background-color: #ffffff;
+    width: 100%;
+    background-image: url('../img/fone1.png'); /* Задаем фон в виде изображения */
+    background-position: top right; /*Центрируем изображение по горизонтали и вертикали */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: contain; /* Масштабируем изображение, чтобы оно полностью помещалось в область */
+}
+
+/* Общие стили для всех секторов */
+.section {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #7E7E7E;
+    margin: 0;
+    scroll-margin-top: 10.5vh;
+    font-size: 3%;
+}
+
+/* Индивидуальные высоты для каждого сектора */
+
+#b {
+    background-color: #ffffff;
+}
+
+#c {
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+}
+
+#d {
+    background-color: #ffffff;
+    margin-top: 80px;
+    min-height: 400px; /* Высота для сектора D */
+    padding-bottom: 80px;
+}
+
+.logo-img{
+    max-width: 90%; /* Ширина не больше 100% контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    display: block; /* Убираем пробелы под изображением */
+    padding-left: 7.5vw;
+}
+
+.list-inline a{
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #7E7E7E;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    transition: color 0.3s; /* Плавный переход цвета при наведении */
+}
+
+.list-inline a:hover {
+    color: #515151; /* Цвет текста при наведении */
+}
+
+.header {
+    /* text-align: center; */
+    max-height: 46.5em;
+    padding-left: 7.5%;
+    padding-bottom: 10%;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.header p {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20.7px; /* Размер для абзаца */
+    color: #7E7E7E; /* Более светлый цвет для текста */
+    padding-top: 19%;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 67pt; /* Размер основного заголовка */
+    color: #1b1b1b; /* Цвет текста */
+    /* margin-bottom: 0.5em; */
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 82.8pt; /* Размер основного заголовка */
+    color: #1b1b1b; /* Цвет текста */
+    /* margin-bottom: 0.5em; */
+}
+
+.button {
+    /* display: inline-block; */
+    min-width: 150px;
+    padding: 6px 34px;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #7E7E7E;
+    margin: 0;
+    margin-left: 18%;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: medium;
+    box-shadow: 0 0 10px #a6c1dd;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+.button:hover{
+    transform: scale(1.05);
+}
+/**
+ * Sticky navigation
+ */
+.sticky {
+    background-color:rgb(255, 255, 255);;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень, чтобы отделить меню от текста */
+    z-index: 10; /* Обеспечивает, что меню всегда находится поверх текста */
+    padding: 0.5em;
+    border-bottom: 1px solid #ABABAB; /*    Добавление разделяющей линии */
+}
+
+/**
+ * Display lists on a single line.
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+ .nav-container{
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.list-inline > li {
+    display: inline-block;
+    /* margin-left: 0.5em; */
+    margin-right: 7.5vw;
+}
+
+.list-inline > li:before {
+    content: "\200B"; /* 1 */
+    position: absolute; /* 2 */
+}
+
+/* Media */
+
+
+
+#a {
+    min-height: 620px;
+    background-color: #ffffff;
+    width: 100%;
+    background-image: url('../img/fone2.jpg'); /* Задаем фон в виде изображения */
+    background-position: bottom left; /*Центрируем изображение по горизонтали и вертикали */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: contain; /* Масштабируем изображение, чтобы оно полностью помещалось в область */
+    border-bottom: 2px solid #ccc;
+}
+#a h2{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 67.3pt; /* Размер основного заголовка */
+    color: #1b1b1b; /* Цвет текста */
+    padding-left: 7.5%;
+    padding-top: 4%;
+}
+.section-a-block{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20.6pt; /* Размер для абзаца */
+    color: #7E7E7E; /* Более светлый цвет для текста */
+    padding-left: 32%;
+    padding-right: 10%;
+    padding-top: 3.9%;
+    margin-bottom: 30px;
+}
+#b{
+    background-color: #ffffff;
+    background-image: url('../img/fone3.jpg'); /* Задаем фон в виде изображения */
+    background-position: top right; /*Центрируем изображение по горизонтали и вертикали */
+    background-repeat: no-repeat repeat; /* Отключаем повторение изображения */
+    background-size: contain; /* Масштабируем изображение, чтобы оно полностью помещалось в область */
+}
+
+.modules {
+    max-width: 816px;
+    margin: 0 auto;
+    padding: 5.8% 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 43px 30px;
+    justify-content: center;
+  }
+  
+  .module {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 50px #BFC2E8;
+    /* padding: 3.4% 4.3%;   */
+    padding: 22px 34px;
+    width: 48%;
+    min-width: 280px;
+    height: 237px;
+    text-align: left top;
+    transition: transform 0.3s;
+    position: relative;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  
+  .module:hover {
+    transform: scale(1.05);
+  }
+  
+  .module h2 {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #5E5E5E;
+    margin-bottom: 0;
+  }
+  
+  .module h1 {
+    margin-top: 1.5%;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    font-size: 23.6px;
+    color: #5E5E5E;
+  }
+  
+  .module p {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10.3px;
+    color: #5E5E5E;
+    margin: 16px 0;
+  }
+  
+  .module button {
+    background: linear-gradient(80deg, #FD93FF, #50D4FF); /* градиент от розового к синему */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* закругленные края */
+    padding: 3% 6%;/* уменьшенный размер кнопки */
+    font-size: 10.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    position: absolute;
+    bottom: 15%;
+
+    /* margin-top: auto; */
+  }
+  
+  .module button:hover {
+    transform: scale(1.05);
+    background-color: #8a49d3;
+  }
+
+
+#c h2{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40pt; /* Размер основного заголовка */
+    color: #1b1b1b; 
+    text-align: center;
+    margin-top: 4.6%;
+}
+.testimonial-slider {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Скрывает неактивные отзывы */
+}
+.testimonial-track {
+    display: flex;
+    /* margin-left: 50px; */
+    margin-left: 34px;
+    margin-top: 3%;
+    gap: 66px;
+    transition: transform 0.5s ease; /* Плавная анимация */
+}
+.testimonial-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 50px #A6C1DD; 
+    min-width: 330px;
+    width: 30%;
+    min-height: 300px;
+    max-height: 600px;
+    padding: 42px 35px;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    background-image: url('../img/quote.svg'); /*доделать кавычки*/
+    margin-top: 42px;
+    background-repeat: no-repeat;
+    background-position: top 42px left 35px;
+    background-size: 40px 40px;
+    transition: transform 0.3s;
+}
+.testimonial-slide p{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    text-align: left;
+    color: #5E5E5E;
+    margin-bottom: 12%;
+}
+.testimonial-slide p::after {
+    content: "";
+    display: block;
+    width: 150px; /* Длина линии */
+    height: 2px; /* Толщина линии */
+    background-color: #FD93FF; /* Цвет линии */
+    margin-top: 8px; /* Отступ между текстом и линией */
+}
+.testimonial-slide h3{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #434343;
+    text-align: left;
+    margin-left: 60px;
+    padding-bottom: 5%;
+}
+.testimonial-slide:hover {
+    transform: scale(1.05);
+  }
+.face{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(80deg, #FD93FF, #50D4FF);
+    padding: 2px;
+    align-items:end;
+}
+.testimonial {
+    display: none; /* Скрыть все отзывы по умолчанию */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial.active {
+    display: block; /* Отображать только активный отзыв */
+}
+
+#c .prev-next-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#c button{
+    background-color: rgba(247, 247, 247, 0);
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#d {
+    background-color: white;
+    background-image: url('../img/fone4.jpg');
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-size: cover; /* Масштабируем изображение, чтобы оно полностью помещалось в область */
+}
+#d h1{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 36pt; /* Размер основного заголовка */
+    color: #1b1b1b; 
+    text-align: center;
+    margin-top: 4.3%;
+}
+#d h2{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    color: #5E5E5E; 
+    text-align: center;
+    margin-top: 1.5%;
+}
+#d .form-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    align-items: center;      /* Центрирует элементы по горизонтали */
+    justify-content: center;   /* Центрирует элементы по вертикали */
+    height: 58vh;             /* Занимает всю высоту окна */
+}
+.form-container input,
+.form-container textarea {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 36px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: transparent; /* Прозрачный фон */
+    border-bottom: 1px solid #7E7E7E; /* Граница, чтобы было видно контур */
+    color: #000; /* Цвет текста */
+    transition: border 0.3s ease, border-width 0.3s ease; /* Плавный переход */
+    outline: none; /* Убираем стандартную подсветку */
+}
+
+.form-container textarea {
+    height: 80px;
+    font-size: 16px;
+    transition: border 0.3s ease, border-width 0.3s ease; /* Плавный переход для textarea */
+}
+
+/* При фокусе уменьшаем ширину обводки и меняем цвет */
+.form-container input:focus,
+.form-container textarea:focus {
+    border-width: 1px; /* Меньше обводка при фокусе */
+    border-color: #64adc5; /* Цвет обводки при фокусе */
+}
+/* Псевдокласс для автозаполненных полей */
+.form-container input:-webkit-autofill,
+.form-container textarea:-webkit-autofill {
+    background-color: transparent !important; /* Прозрачный фон для автозаполненных полей */
+    transition: background-color 5000s ease-in-out 0s; /* Очень длинная анимация для предотвращения изменения фона */
+}
+
+.form-container button {
+    margin-top: 2%;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #5E5E5E;
+    border: 1px solid #5E5E5E;
+    border-radius: 8px;
+    padding: 17px 40px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Эффект при наведении на кнопку */
+.form-container button:hover {
+    background: linear-gradient(80deg, #fea6ff, #80dfff); /* градиент от розового к синему */
+    color: #fff;
+    /* border: solid; */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #ffffff; 
+    transform: scale(1.05);
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.visible {
+    opacity: 1;          /* Полностью видимый */
+    height: auto; /* Позволяет элементу занимать необходимую высоту */
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+#t{
+    background-color: white;
+    border-bottom: 2px solid #ccc;
+    width: 100%; /* ширина блока */
+    overflow: hidden;
+    white-space: nowrap; /* отключаем перенос строк */
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.scroll-text{
+    margin-top: 2px;
+    display: inline-block;
+    padding-left: 100%; /* чтобы текст начинался за пределами блока */
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    background: linear-gradient(80deg, #fc95ca, #f477ff, #80dfff);
+    text-shadow: 0 4px 50px #b1b4d7;;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+#e{
+    border-top: 1px solid #ccc;
+    background-color: rgb(247, 247, 247);
+    min-height: 20vh;
+    font-size: 14px;
+    justify-content: space-between;
+    padding-right: 5%;
+
+    .logo{
+        /* background: linear-gradient(80deg, #fbd1ff, #cdf2ff); */
+        border-radius: 0 15px 15px 0;
+        min-width: 23%;
+        margin-right: 5.5%;
+    }
+    .basement{
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        margin-top: 10px;
+        max-width: 95%;
+        font-size: 80%;
+        font-style: italic;  
+        text-align: center;
+    }
+    .list-inline {
+        display: flex;
+        flex-direction: row;
+        padding-top: 3%;
+        padding-left: 4%;
+        justify-content: center;
+    }
+    .messengers {
+        display: flex;
+        gap: 4%;
+        margin: 4% 0 14% 0;
+        justify-content: right;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:767px) {
+    .header{
+        padding: 0 0 12% 12%;
+        background-size: cover;
+        h2{
+            max-width: 200px;
+            font-size: 26pt;
+        }
+        h1{
+            font-size: 29pt;
+        }
+        .button{
+            font-size: 13px;
+        }
+    }
+
+    #a{
+        background-size: cover;
+        h2{
+            font-size: 34pt;
+            margin-left: 4%;
+        }
+        .section-a-block{
+            padding-left: 12%;
+            font-size: 15pt;
+            text-align: justify;
+        }
+    }
+    #e{
+        font-size: 5pt;
+    }
+}
+
+@media (min-width: 1900px) {
+    .testimonial-track {
+        margin-left: 4%; /* Половина от gap */
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1899px) {
+    .testimonial-track {
+        margin-left: 3%; /* Половина от gap */
+    }
+}
+
+@media (max-width: 920px) and (max-width: 1199px){
+    .testimonial-track {
+        margin-left: 30px; /* Половина от gap */
+    }
+}
+
+@media (min-width: 820px) and (max-width: 919px) {
+    .testimonial-track {
+        margin-left: 5%; /* Половина от gap */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 819px) {
+    .testimonial-track {
+        margin-left: 2%; /* Половина от gap */
+    }
+}
+
+@media (min-width: 412px) and (max-width: 767px) {
+    .testimonial-track {
+        margin-left: 10%; /* Половина от gap */
+    }
+}
+
+@media (min-width: 360px) and (max-width: 411px) {
+    .testimonial-track {
+        margin-left: 4.6%; /* Половина от gap */
+    }
+    
+}
+
+@media (max-width: 359px) {
+    .testimonial-track {
+        margin-left: 3%; /* Половина от gap */
+    }
+}

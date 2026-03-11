@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Course1</title>
+    <link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="toggle-button" onclick="toggleSidebar()">скрыть</button>
+            <div class="logo"><a href="#logo"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a">о проекте</a></li>
+                <li><a href="#b">обучение</a></li>
+                <li><a href="#c">отзывы</a></li>
+                <li><a href="#d">связь с нами</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="section" id="logo"></article>
+    </div>
+
+    <div class="main-container">
+            <div class="sidebar-module" id="sidebar">
+                <a href="course3.html">&lt; назад</a>
+                <h2>4 МОДУЛЬ</h2>
+                <h3>МОДЕЛИРОВАНИЕ</h3>
+                <ul class="lesson-list">
+                    <li><a href="#" onclick="add_content4_1()">Mirror</a></li>
+                    <li><a href="#" onclick="add_content4_2()">Subdivision surface</a></li>
+                    <li><a href="#" onclick="add_content4_3()">Smooth</a></li>
+                    <li><a href="#" onclick="add_content4_4()">Boolean</a></li>
+                </ul>
+                <button class="button-next" onclick="openNextModule()">СЛЕДУЮЩИЙ МОДУЛЬ &gt</button>
+                <script>
+                    function openNextModule() {
+                        window.location.href = "course5.html";}
+                </script>
+
+            </div>
+        
+        
+        <div class="back-container">
+            <div class="lesson-container" id="lesson-container">
+                <h1 class="lesson-title">MIRROR</h1>
+                <p class="lesson-text">
+                    Поговорим о модификаторах, которые пригодятся нам в работе.
+                    <br>
+                    Добавление модификаторов на объект происходит в специальной вкладке.
+                    <br> <br>
+                    <img
+                    src="img/Mod-1.png"
+                    width = 60%>
+                    <br> <br>
+                    Модификатор Mirror – модификатор зеркало, который позволяет отражать объект, относительно другого объекта по заданной оси.
+                    <br>
+                    Давайте отразим сферу относительно куба. Для этого выберем в списке модификаторов – mirror. 
+                    <br> <br>
+                    <img
+                    src="img/Mod-2.png"
+                    width = 100%>
+                    <br> <br>
+                    Пипеточкой выберем нужный объект относительно, которого нужно произвести отражение. В нашем случае – куб. Готово! Наша сфера отразилась по оси X.
+                    <br>
+                    <img
+                    src="img/Mod-3.png"
+                    width = 100%>
+                </p>
+                <button class="button-next-ur" onclick="add_content4_2()">СЛЕДУЮЩИЙ МОДУЛЬ</button>
+            </div>
+        </div>
+    </div>
+<script src="back.js"></script>
+</body>
+</html>

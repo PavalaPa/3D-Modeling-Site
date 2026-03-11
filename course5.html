@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Course1</title>
+    <link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="toggle-button" onclick="toggleSidebar()">скрыть</button>
+            <div class="logo"><a href="#logo"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a">о проекте</a></li>
+                <li><a href="#b">обучение</a></li>
+                <li><a href="#c">отзывы</a></li>
+                <li><a href="#d">связь с нами</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="section" id="logo"></article>
+    </div>
+
+    <div class="main-container">
+            <div class="sidebar-module" id="sidebar">
+                <a href="course4.html">&lt; назад</a>
+                <h2>5 МОДУЛЬ</h2>
+                <h3>МАТЕРИАЛЫ</h3>
+                <ul class="lesson-list">
+                    <li><a href="#">Материалы</a></li>
+                </ul>
+                <button class="button-next" onclick="openNextModule()">СЛЕДУЮЩИЙ МОДУЛЬ &gt</button>
+                <script>
+                    function openNextModule() {
+                        window.location.href = "course6.html";}
+                </script>
+
+            </div>
+        
+        
+        <div class="back-container">
+            <div class="lesson-container">
+                <h1 class="lesson-title">Mirror</h1>
+                <p class="lesson-text">
+                    Материалы в Blender позволяют моделировать то, из чего сделан объект. Давайте создадим материалы для наших объектов. Для этого выберем режим шейдинга – Material Preview. Новые материалы создаются в разделе Material.
+                    <br> <br>
+                    <img
+                    src="img/Materials-1.png"
+                    width = 40%>
+                    <br> <br>
+                    Создадим материал для наших стен и пола, для этого нажмем на кнопочку New.
+                    <br>
+                    Зададим название материала и поменяем цвет. 
+                    <br> <br>
+                    <img
+                    src="img/Materials-2.png"
+                    width = 100%>
+                    <br> <br>
+                    Также поменяем параметр шероховатости, чтобы комната не имела глянцевость.
+                    <br> <br>
+                    <img
+                    src="img/Materials-2.5.png"
+                    width = 30%>
+                    <br> <br>
+                    Можем поменять цвет нашего пола. Для этого создадим новый материал на «+», настроим желаемый цвет. В режиме редактирования выделим грани поля, выберем наш новый материал пола и нажмем кнопочку Assign.
+                    <br> <br>
+                    <img
+                    src="img/Materials-3.png"
+                    width = 100%>
+                    <br> <br>
+                    Поподробнее разберем создание материалов для книги. В режиме редактирования граней выберем нужные, которые станут страницами.
+                    <br> <br>
+                    <img
+                    src="img/Materials-4.png"
+                    width=40%>
+                    <br> <br>
+                    Добавим новый материал, подберем нужный цвет и применим его.
+                    <br><br>
+                    <img
+                    src="img/Materials-5.png"
+                    width=40%>
+                    <br> <br>
+                    Наши странички готовы.
+                    <br> <br>
+                    <img
+                    src="img/Materials-6.png"
+                    width=40%>
+                    <br> <br>
+                    Самостоятельно завершите создание материалов для предметов комнаты. Можете поэкспериментировать и покрутить различные бегунки.
+                    <br> <br>
+                    <img
+                    src="img/Materials-7.png"
+                    width=100%>
+                </p>
+                <button class="button-next-ur" onclick="next_ur()">СЛЕДУЮЩИЙ МОДУЛЬ</button>
+                <script>
+                    function next_ur() {
+                        window.location.href = "course6.html";
+                    }
+                </script> 
+            </div>
+        </div>
+    </div>
+<script src="back.js"></script>
+</body>
+</html>

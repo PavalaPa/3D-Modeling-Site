@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Course1</title>
+    <link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="toggle-button" onclick="toggleSidebar()">скрыть</button>
+            <div class="logo"><a href="#logo"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a">о проекте</a></li>
+                <li><a href="#b">обучение</a></li>
+                <li><a href="#c">отзывы</a></li>
+                <li><a href="#d">связь с нами</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="section" id="logo"></article>
+    </div>
+
+    <div class="main-container">
+            <div class="sidebar-module" id="sidebar">
+                <a href="#">&lt; назад</a>
+                <h2>1 МОДУЛЬ</h2>
+                <h3>ВВЕДЕНИЕ</h3>
+                <ul class="lesson-list">
+                    <li><a href="#">Описание курса</a></li>
+                    <li><a href="https://www.blender.org/download/">Скачать Blender по ссылке</a></li>
+                </ul>
+                <button class="button-next" onclick="openNextModule()">СЛЕДУЮЩИЙ МОДУЛЬ &gt</button>
+                <script>
+                    function openNextModule() {
+                        window.location.href = "course2.html";}
+                </script>
+            </div>
+        
+        
+        <div class="back-container">
+            <div class="lesson-container">
+                <h1 class="lesson-title">ОПИСАНИЕ КУРСА</h1>
+                <p class="lesson-text">
+                    Добро пожаловать на бесплатный курс-гайд по 3D-моделированию в Blender!
+                    <br> <br>
+                    Курс «От идеи до модели» подойдёт новичкам, которые хотят или уже пробовали себя в сфере полигонального моделирования.
+                    <br> <br>
+                    Почему Блендер?<br>
+                    Во–первых, это бесплатная программа, которая доступна для скачивания каждому.<br>
+                    Во-вторых, он менее требователен к ресурсам компьютера, нежели другие программы для моделирования трехмерных объектов.<br>
+                    В-третьих, широкий функционал этой программы позволяет создавать интересные объекты, прикладывая к этому меньше усилий.<br>
+                    <br> <br>
+                    Скачать и установить блендер можно на официальном сайте - <a href="https://www.blender.org/">https://www.blender.org/</a>
+                    <br> <br>
+                    Во время прохождения нашего курса, вы<br>
+                    &#903;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; освоите основные инструменты программы<br>
+                    &#903;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; изучите модификаторы, необходимые для работы<br>
+                    &#903;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; научитесь рендерить объекты<br>
+                    &#903;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; смоделируете комнату с различными предметами интерьера<br>
+                    <br> <br>
+                    После прохождения гайда вы получите советы по дальнейшему пути развития в сфере 3D-моделирования.
+                    <br> <br>
+                    Желаем удачи в прохождении!
+                </p>
+                <button class="button-next-ur" onclick="next_ur()">СЛЕДУЮЩИЙ МОДУЛЬ</button>
+                <script>
+                    function next_ur() {
+                        window.location.href = "course2.html";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+<script src="back.js"></script>
+</body>
+</html>

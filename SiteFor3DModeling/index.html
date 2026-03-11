@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Press+Start+2P&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Ideal Model</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <!-- Капча -->
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <div class="logo"><a href="#logo" title="to-start"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a" title="about-project">о проекте</a></li>
+                <li><a href="#b" title="education">обучение</a></li>
+                <li><a href="#c" title="reviews">отзывы</a></li>
+                <li><a href="#d" title="contact-us">связь с нами</a></li>
+            </ul>
+        </div>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Останавливаем стандартное поведение
+            
+                    const targetId = this.getAttribute('href').substring(1); // Получаем id элемента (например, "a")
+                    const newTitle = this.getAttribute('title'); // Получаем значение атрибута title (например, "about-project")
+            
+                    // Меняем URL в адресной строке
+                    history.pushState(null, null, `#${newTitle}`);
+            
+                    // Прокручиваем страницу к элементу с id, соответствующим href
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            </script>
+    </nav>
+    <div class="back1"></div>
+    <div class="container">
+        <article class="section" id="logo"></article>
+        <!-- <img src="../img/BlueEllipse.svg" class="background-img" alt="bac"> -->
+        <header class="header">
+            <p>бесплатный курс-гайд по 3D-моделированию</p>
+            <h2>ОТ ИДЕИ <a href="#b" class="button">к урокам &gt;</a></h2>
+            <h1>ДО МОДЕЛИ</h1>
+        </header>
+        </h2></article>
+    </div>
+    <main>
+        <article class="section" id="a">
+            <h2>О ПРОЕКТЕ</h2>
+            <div class="section-a-block">Гайд по 3D моделированию помогает новичкам освоить основные принципы и техники создания трёхмерных объектов. Вы изучите этот курс и станете суперкрутыми, классными, самыми прекрасными и какими-нибудь еще. Да-да, вот такой потрясающий проект мы сделали, мы крутые и ты тоже. Еще что-то написано туруруруруру. Пурумпумпум. Траляля</div>
+        </article>
+        <article class="section" id="t">
+            <div class="scroll-text">начни свой путь в 3d!</div>
+        </article>
+        <article class="section" id="b">
+            <div class="modules">
+                <div class="module">
+                    <h2>1 МОДУЛЬ</h2>
+                    <h1>ВВЕДЕНИЕ</h1>
+                    <p>В этом блоке мы расскажем о гайде и программе Blender. Узнаем, что будет изучаться, и какой результат будет после прохождения курса.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+                <div class="module">
+                    <h2>2 МОДУЛЬ</h2>
+                    <h1>ОСНОВНЫЕ ИНСТРУМЕНТЫ</h1>
+                    <p>В этом блоке описываются инструменты и горячие клавиши, которые пригодятся в работе.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+                <div class="module">
+                    <h2>3 МОДУЛЬ</h2>
+                    <h1>МОДИФИКАТОРЫ</h1>
+                    <p>В этом разделе рассказывается о модификаторах и их настройке.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+                <div class="module">
+                    <h2>4 МОДУЛЬ</h2>
+                    <h1>МОДЕЛИРОВАНИЕ</h1>
+                    <p>Этот раздел посвящен моделированию нашей комнаты. Мы вместе смоделируем различные предметы интерьера, а также вы самостоятельно попробуете добавить свои предметы декора.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+                <div class="module">
+                    <h2>5 МОДУЛЬ</h2>
+                    <h1>МАТЕРИАЛЫ</h1>
+                    <p>Этот раздел посвящен различным материалам, из которых состоят объекты нашей комнаты.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+                <div class="module">
+                    <h2>6 МОДУЛЬ</h2>
+                    <h1>РЕНДЕР</h1>
+                    <p>В этом блоке вы узнаете, как настроить камеру и свет, чтобы при рендере получить красивое изображение.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+                <div class="module">
+                    <h2>7 МОДУЛЬ</h2>
+                    <h1>ДАЛЬНЕЙШИЙ ПУТЬ</h1>
+                    <p>В этом блоке мы подведем итоги проделанной работы. Мы дадим вам советы и информацию, чтобы направить вас для дальнейшего изучения 3D-моделирования.</p>
+                    <button href="#">ПЕРЕЙТИ</button>
+                </div>
+            </div>
+
+        </article>
+        <article class="section" id="c">
+            <h2>ОТЗЫВЫ</h2>
+            <div class="testimonial-track">
+                <div class="testimonial-slide">
+                    <p>Это был замечательный опыт! Сервис на высшем уровне.</p>
+                    <img src="img\мяк.jpg" class="face" width="200">
+                    <h3>Манул Ева</h3>
+                </div>
+                <div class="testimonial-slide">
+                    <p>Хуйня. Деньги на ветер. Не рекомендую.</p>
+                    <img src="img\мяк.jpg" class="face" width="200">
+                    <h3>Манул Ева</h3>
+                </div>
+                <div class="testimonial-slide">
+                    <p>Буду рекомендовать всем своим друзьям. Спасибо за отличный сервис!</p>
+                    <img src="img\мяк.jpg" class="face" width="200">
+                    <h3>Манул Ева</h3>
+                </div>
+                <div class="testimonial-slide">
+                    <p>Буду рекомендовать всем своим друзьям. Спасибо за отличный сервис!</p>
+                    <img src="img\мяк.jpg" class="face" width="200">
+                    <h3>Манул Ева</h3>
+                </div>
+                <div class="testimonial-slide">
+                    <p>Буду рекомендовать всем своим друзьям. Спасибо за отличный сервис!</p>
+                    <img src="img\мяк.jpg" class="face" width="200">
+                    <h3>Манул Ева</h3>
+                </div>
+                <div class="testimonial-slide">
+                    <p>Буду рекомендовать всем своим друзьям. Спасибо за отличный сервис!</p>
+                    <img src="img\мяк.jpg" class="face" width="200">
+                    <h3>Манул Ева</h3>
+                </div>
+                <!-- Добавьте больше отзывов здесь -->
+            </div>
+            <div class="prev-next-buttons">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </article>
+        <article class="section" id="d">
+            <h1>ЧТО ДУМАЕШЬ О КУРСЕ?</h1>
+            <h2>Нам важно твое мнение, поделись им!</h2>
+            <div class="form-container">
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                <div class="g-recaptcha hidden" data-sitekey="6LfAo3cqAAAAAGDT0p1woOXFHUZ0SQA4IYmd33JV"></div>
+                <button id="sendButton" type="button" onclick="sendMail()">ОТПРАВИТЬ</button>
+            </div>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <script>
+                document.getElementById("comment").addEventListener("input", function() {
+                    const captcha = document.querySelector(".g-recaptcha");
+                    if (this.value.trim() !== "") {
+                        captcha.classList.remove("hidden");
+                        captcha.classList.add("visible");    // Показываем с плавным переходом
+                    } else {
+                        captcha.classList.remove("visible"); // Убираем видимость
+                        captcha.classList.add("hidden");     // Скрываем с плавным переходом
+                    }
+                });
+
+                function sendMail() {
+                    // Находим кнопку отправки и блокируем её
+                    const sendButton = document.getElementById("sendButton");
+                    sendButton.disabled = true;
+                    sendButton.textContent = "Отправка..."; // Изменение текста на кнопке
+                    const captcha = document.querySelector(".g-recaptcha");
+
+                    // Получаем значения из полей формы
+                    var name = document.querySelector("#name").value;
+                    var email = document.querySelector("#email").value;
+                    var comment = document.querySelector("#comment").value;
+
+                    // Проверяем, что все поля заполнены
+                    if (name.trim() === "" || email.trim() === "" || comment.trim() === "") {
+                        alert("Пожалуйста, заполните все поля.");
+                        sendButton.disabled = false;
+                        sendButton.textContent = "ОТПРАВИТЬ"; // Возвращаем текст кнопки
+                        return;  // Прерываем выполнение, если какое-либо поле пустое
+                    }
+
+                    // Регулярное выражение для проверки формата email
+                    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    if (!emailPattern.test(email)) {
+                        alert("Пожалуйста, введите действительный email.");
+                        sendButton.disabled = false;
+                        sendButton.textContent = "ОТПРАВИТЬ"; // Возвращаем текст кнопки
+                        return;  // Прерываем выполнение, если email невалиден
+                    }
+
+                    // Инициализация emailjs
+                    (function(){
+                        emailjs.init("2AulMl-ab1Lxkz9KZ");
+                    })();
+
+                    var params = {
+                        name: name,
+                        comment: comment,
+                        email: email,
+                    };
+
+                    var serviceID = "service_7ab4mhc";
+                    var templateID = "template_oskhaib";
+
+                    emailjs.send(serviceID, templateID, params)
+                    .then( res => {
+                        alert("Комментарий уже на модерации!");
+                        // Очистка полей формы
+                        document.querySelector("#name").value = '';
+                        document.querySelector("#email").value = '';
+                        document.querySelector("#comment").value = '';
+                        captcha.classList.remove("visible"); // Убираем видимость
+                        captcha.classList.add("hidden");     // Скрываем с плавным переходом
+                        grecaptcha.reset()
+
+                        // Разблокируем кнопку и восстанавливаем её текст
+                        sendButton.disabled = false;
+                        sendButton.textContent = "ОТПРАВИТЬ";
+                    })
+                    .catch(err => {
+                        console.error("Ошибка отправки:", err);
+                        
+                        // В случае ошибки разблокируем кнопку и восстанавливаем её текст
+                        sendButton.disabled = false;
+                        sendButton.textContent = "ОТПРАВИТЬ";
+                    });
+                }
+            </script>
+            <div id="form-message"></div>
+        </article>
+        <article class="section" id="e">
+            <div class="nav-container">
+                <div class="logo"><a href="#logo" title="to-start"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+                <div class="basement">
+                    <p>Наш проект по 3D моделированию создан для обучения и поддержки творческих людей, стремящихся освоить современные технологии. Мы предлагаем бесплатные ресурсы и образовательные материалы, чтобы каждый желающий мог развиваться в области 3D моделирования. Все наши усилия направлены на то, чтобы сделать обучение доступным и увлекательным, а наш проект полностью работает на благотворительной основе.</p>
+                    <ul class="list-inline">
+                        <li><a href="#a" title="about-project">о проекте</a></li>
+                        <li><a href="#b" title="education">обучение</a></li>
+                        <li><a href="#c" title="reviews">отзывы</a></li>
+                        <li><a href="#d" title="contact-us">связь с нами</a></li>
+                        <li>
+                            <a href="mailto:valentinka.pazyuk@mail.ru">pochta@mail.ru</a>
+                            <div class="messengers">
+                                <a href="https://t.me/hshhhhshhh" id="telega" target="_blank">
+                                    <img src="img/telegram.png" alt="Telegram">
+                                </a>
+                                <a href="https://vk.com/kularar" id="vk" target="_blank">
+                                    <img src="img/vk.png" alt="VK">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.querySelectorAll('a[href^="#"]').forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); // Останавливаем стандартное поведение
+                
+                        const targetId = this.getAttribute('href').substring(1); // Получаем id элемента (например, "a")
+                        const newTitle = this.getAttribute('title'); // Получаем значение атрибута title (например, "about-project")
+                
+                        // Меняем URL в адресной строке
+                        history.pushState(null, null, `#${newTitle}`);
+                
+                        // Прокручиваем страницу к элементу с id, соответствующим href
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
+                });
+                </script>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Course1</title>
+    <link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="toggle-button" onclick="toggleSidebar()">скрыть</button>
+            <div class="logo"><a href="#logo"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a">о проекте</a></li>
+                <li><a href="#b">обучение</a></li>
+                <li><a href="#c">отзывы</a></li>
+                <li><a href="#d">связь с нами</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="section" id="logo"></article>
+    </div>
+
+    <div class="main-container">
+            <div class="sidebar-module" id="sidebar">
+                <a href="course2.html">&lt; назад</a>
+                <h2>3 МОДУЛЬ</h2>
+                <h3>МОДЕЛИРОВАНИЕ</h3>
+                <ul class="lesson-list">
+                    <li><a href="#" onclick="add_content3_1()">Стены и пол</a></li>
+                    <li><a href="#" onclick="add_content3_2()">Стол</a></li>
+                    <li><a href="#" onclick="add_content3_3()">Стулья</a></li>
+                    <li><a href="#" onclick="add_content3_4()">Диван</a></li>
+                    <li><a href="#" onclick="add_content3_5()">Шкаф</a></li>
+                    <li><a href="#" onclick="add_content3_6()">Книги</a></li>
+                    <li><a href="#" onclick="add_content3_7()">Телевизор</a></li>
+                    <li><a href="#" onclick="add_content3_8()">Готовая модель</a></li>
+                </ul>
+                <button class="button-next" onclick="openNextModule()">СЛЕДУЮЩИЙ МОДУЛЬ &gt</button>
+                <script>
+                    function openNextModule() {
+                        window.location.href = "course4.html";}
+                </script>
+
+            </div>
+        
+        
+        <div class="back-container">
+            <div class="lesson-container" id="lesson-container">
+                <h1 class="lesson-title">СТЕНЫ И ПОЛ</h1>
+                <p class="lesson-text">
+                    Теперь можно приступить к самому интересному – к моделированию! 
+                    <br>
+                    Наша цель – создать комнату в разрезе с элементами декора. Вместе мы создадим основные элементы комнаты, но никто не ограничивает вас в вашей фантазии. Самостоятельное создание простых объектов, например, стакана или вазы, станет отличной практикой, поэтому не бойтесь и творите!
+                    <br>
+                    Для начала нам нужно освободить поле для работы, это можно сделать с помощью известной команды – «X -> Delete». 
+                    <br> <br>
+                    <img 
+                    src="img/Model-1.png"
+                    width = 100%>
+                    <br> <br>
+                    Добавим новый меш – поверхность, с помощью комбинации кнопок shift + A -> Mesh -> Plane. Увеличим нашу поверхность с помощью сочетания  S+4 до нужных размеров. С помощью кнопки tab перейдем в Edit Mode и выберем режим работы с гранями. С помощью E+Zвытянем два задних ребра. 
+                    <br> <br>
+                    <img
+                    src = "img/Model-2.png"
+                    width = 100%>
+                    <br> <br>
+                    Отлично, мы создали стены нашей комнаты! Но, чтобы мы не мешали соседям, а соседи не мешали нам нужно задать толщину нашей комнате. Для этого выделем все грани нашей комнаты в режиме редактирования граней, нажмем клавиши alt+E и в выпадающем меню выбираем Extrude Faces Along Normals, чтобы наш экструд корректно сработал. И с помощью S вытягиваем наши стены и пол, ведя мышкой в сторону. Не забываем про ctrl + A -> scale.
+                    <br> <br>
+                    <img
+                    src="img/Model-3.png"
+                    width = 100%>
+                </p>
+                <button class="button-next-ur" onclick="add_content3_2()">СЛЕДУЮЩИЙ МОДУЛЬ</button>
+            </div>
+        </div>
+    </div>
+<script src="back.js"></script>
+</body>
+</html>

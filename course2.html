@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Course1</title>
+    <link rel="stylesheet" href = "css/main.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="toggle-button" onclick="toggleSidebar()">скрыть</button>
+            <div class="logo"><a href="#logo"><img src="img/logo.svg" alt="Logo" class="logo-img"></a></div>
+            <ul class="list-inline">
+                <li><a href="#a">о проекте</a></li>
+                <li><a href="#b">обучение</a></li>
+                <li><a href="#c">отзывы</a></li>
+                <li><a href="#d">связь с нами</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="section" id="logo"></article>
+    </div>
+
+    <div class="main-container">
+            <div class="sidebar-module" id="sidebar">
+                <a href="courses.html">&lt; назад</a>
+                <h2>2 МОДУЛЬ</h2>
+                <h3>ОСНОВНЫЕ ИНСТРУМЕНТЫ</h3>
+                <ul class="lesson-list">
+                    <li><a href="#" onclick="add_content2_1()">Навигация</a></li>
+                    <li><a href ="#" onclick="add_content2_2()">Удаление объекта</a></li>
+                    <li><a href="#" onclick="add_content2_3()">Перемещение и трансформация объекта</a></li>
+                    <li><a href="#" onclick="add_content2_4()">Режим работы</a></li>
+                    <li><a href="#" onclick="add_content2_5()">Инструменты Edit Mode</a></li>
+                    <li><a href="#" onclick="add_content2_6()">Слаживание</a></li>
+                    <li><a href="#" onclick="add_content2_7()">Отображение объекта</a></li>
+                </ul>
+                <button class="button-next" onclick="openNextModule()">СЛЕДУЮЩИЙ МОДУЛЬ &gt</button>
+                <script>
+                    function openNextModule() {
+                    window.location.href = "course3.html";}
+                </script>
+                
+            </div>
+        
+        
+        <div class="back-container">
+            <div class="lesson-container" id="lesson-container">
+                <h1 class="lesson-title">НАВИГАЦИЯ</h1>
+                <p class="lesson-text">Итак, вы установили блендер и готовы приступить к работе <br>
+                    <br>
+                    Для начала, давайте обсудим проекцию камеры во Viewport. Viewport – это основная рабочая область, в которой отображаются наши объекты. В Blender существуют два типа проекции – ортографическая и перспективная. На картинке показана разница отображения с одного угла.
+                    <br> <br>
+                    <img 
+                        src="img/Nav-1.1(2).png" 
+                        width=100%
+                        alt="Screen1">
+                    <br> <br>
+                    Мы привыкли к перспективному отображению объектов, когда удалённые от нас объекты кажутся меньше. В такой перспективе и происходит рендер объекта. Ортографическая проекция часто кажется немного странной на первый взгляд, потому что объекты остаются одного размера независимо от расстояния. Тем не менее советую в работе использовать именно ортографический режим, потому что он обеспечивает более «техническое» понимание сцены, что упрощает моделирование и оценку пропорций. Переключение режимов быстро осуществляется с помощью Numpad5.
+                    <br> <br>
+                    По умолчанию в блендере во Viewport находится 3 объекта – куб, камера и свет. Навигация по рабочему полю происходит благодаря зажатию колесика мыши. По умолчанию вращение осуществляется вокруг 3D-курсора.
+                    <br> <br>
+                    <img src="img/Nav-1.2.png" alt="Screen2" class="screen-2">
+                    <br> <br>
+                    По умолчанию вращение происходит вокруг условной точки в пространстве. Чтобы сделать центром выбранный объект, заходим во вкладку Правка — Настройки — Навигация (Edit — Preferences — Navigation) и отмечаем галочкой пункт Вращать вокруг выделения (Orbit Around Selection). Это сильно упростит дальнейшую работу. 
+                    <br> <br>
+                    <img 
+                    src="img/Nav-1.3.png"
+                    width=100%>
+                    <br> <br>
+                    Зажатие shift и колесика мыши одновременно позволяют перемещаться во Viewport. 
+                </p>
+                <button class="button-next-ur" onclick="add_content2_2()">СЛЕДУЮЩИЙ МОДУЛЬ</button>
+            </div>
+        </div>
+    </div>
+<script src="back.js"></script>
+</body>
+</html>
